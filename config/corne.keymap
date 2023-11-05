@@ -25,6 +25,18 @@
             bindings = <&kp LS(L) &kp E &kp F &kp T &kp SPACE &kp M &kp E &kp S &kp S &kp A &kp G &kp E &kp SPACE &kp F &kp O &kp R &kp SPACE &kp A &kp SPACE &kp C &kp A &kp L &kp L &kp SPACE &kp B &kp A &kp C &kp K &kp DOT &kp SPACE &kp LS(P) &kp R &kp O &kp V &kp I &kp D &kp E &kp D &kp SPACE &kp N8 &kp N0 &kp N0 &kp SPACE &kp C &kp A &kp L &kp L &kp SPACE &kp B &kp A &kp C &kp K &kp SPACE &kp N &kp U &kp M &kp B &kp E &kp R>;
             label = "LEFT_MESSAGE";
         };
+        New_Patient_Del: New_Patient_Del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(R) &kp E &kp V &kp I &kp E &kp W &kp E &kp D &kp SPACE &kp D &kp O &kp S &kp E &kp COMMA &kp SPACE &kp S &kp T &kp O &kp R &kp A &kp G &kp E &kp FSLH &kp H &kp A &kp N &kp D &kp L &kp I &kp N &kp G &kp COMMA &kp SPACE &kp C &kp O &kp M &kp M &kp O &kp N &kp SPACE &kp W &kp A &kp R &kp N &kp I &kp N &kp G &kp S &kp SPACE &kp AMPS &kp SPACE &kp S &kp I &kp D &kp E &kp SPACE &kp E &kp F &kp F &kp E &kp C &kp T &kp S &kp SPACE &kp D &kp U &kp R &kp I &kp N &kp G &kp SPACE &kp T &kp H &kp E &kp SPACE &kp C &kp A &kp L &kp L &kp DOT>;
+            label = "NEW_PATIENT_DEL";
+        };
+        Self_Admin: Self_Admin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp E &kp S &kp COMMA &kp SPACE &kp V &kp E &kp R &kp I &kp F &kp I &kp E &kp D &kp SPACE &kp S &kp E &kp L &kp F &kp MINUS &kp A &kp D &kp M &kp I &kp N &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp P &kp A &kp T &kp I &kp E &kp N &kp T &kp DOT &kp SPACE &kp LS(P) &kp A &kp T &kp I &kp E &kp N &kp T &kp SPACE &kp C &kp A &kp N &kp SPACE &kp S &kp E &kp L &kp F &kp SPACE &kp A &kp D &kp M &kp I &kp N &kp SPACE &kp V &kp I &kp A &kp SPACE &kp V &kp E &kp R &kp B &kp A &kp L &kp SPACE &kp C &kp O &kp N &kp S &kp E &kp N &kp T &kp DOT>;
+            label = "SELF_ADMIN";
+        };
     };
 
     keymap {
@@ -55,10 +67,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6   &kp N7          &kp N8          &kp N9        &kp N0           &kp BSPC
-&trans     &trans  &trans  &trans    &trans  &trans       &trans   &trans          &trans          &trans        &trans           &kp KP_DIVIDE
-&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &trans   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
-                           &kp LGUI  &trans  &kp SPACE    &kp RET  &kp PERIOD      &trans
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5    &kp N6  &kp N7          &kp N8          &kp N9        &kp N0           &kp BSPC
+&trans     &trans  &trans  &trans    &trans  &trans    &trans  &trans          &trans          &trans        &trans           &kp KP_DIVIDE
+&kp LSHFT  &trans  &trans  &trans    &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
+                           &kp LGUI  &trans  &trans    &trans  &kp PERIOD      &trans
             >;
         };
 
