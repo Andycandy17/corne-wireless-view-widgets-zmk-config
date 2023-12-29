@@ -78,7 +78,7 @@
 
             label = "Lower";
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7          &kp N8          &kp N9        &kp N0           &kp BSPC
+&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7          &kp N8          &kp N9        &kp N0           &kp MINUS
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &kp KP_DIVIDE
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
                          &trans  &trans  &trans    &trans  &trans          &kp PERIOD
