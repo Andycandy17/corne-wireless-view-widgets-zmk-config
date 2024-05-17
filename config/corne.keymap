@@ -60,6 +60,13 @@
             bindings = <&none &kp LS(P) &kp L &kp E &kp A &kp S &kp E &kp SPACE &kp R &kp E &kp V &kp I &kp E &kp W &kp SPACE &kp LS(B) &kp I &kp O &kp L &kp O &kp G &kp I &kp C &kp S &kp SPACE &kp LS(C) &kp A &kp R &kp E &kp G &kp I &kp V &kp E &kp R &kp SPACE &kp LS(C) &kp O &kp N &kp S &kp E &kp N &kp T &kp SPACE &kp F &kp O &kp R &kp M &kp DOT &kp SPACE &kp LS(S) &kp I &kp G &kp N &kp SPACE &kp A &kp N &kp D &kp SPACE &kp D &kp A &kp T &kp E &kp SPACE &kp W &kp H &kp E &kp N &kp SPACE &kp P &kp O &kp S &kp S &kp I &kp B &kp L &kp E &kp DOT &kp SPACE>;
             label = "DOCUSIGN";
         };
+
+        AddingMed: AddingMed {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp TAB &kp LS(O) &kp R &kp A &kp L &kp TAB &kp LS(F10) &kp ENTER &kp F2>;
+            label = "ADDINGMED";
+        };
     };
 
     behaviors {
