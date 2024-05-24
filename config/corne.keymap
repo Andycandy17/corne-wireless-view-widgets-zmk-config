@@ -21,11 +21,6 @@
             bindings = <&Spoke_w_Patient>;
             key-positions = <2 38>;
         };
-
-        Self_Admin_COMBO {
-            bindings = <&Self_Admin>;
-            key-positions = <13 38>;
-        };
     };
 
     macros {
@@ -98,6 +93,13 @@
             bindings = <&none &kp N &kp O &kp N &kp E &kp SPACE &kp T &kp H &kp A &kp T &kp SPACE &kp I &kp S &kp SPACE &kp C &kp L &kp I &kp N &kp I &kp C &kp A &kp L &kp L &kp Y &kp SPACE &kp S &kp I &kp G &kp N &kp I &kp F &kp I &kp C &kp A &kp N &kp T>;
             label = "NOT_SIGNIFICANT";
         };
+
+        Adding_Med: Adding_Med {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp O &kp R &kp A &kp L &kp TAB &kp TAB &kp LC(V) &kp LC(F2)>;
+            label = "ADDING_MED";
+        };
     };
 
     behaviors {
@@ -145,6 +147,15 @@
 
             tapping-term-ms = <151>;
         };
+
+        F9_to_Date_TAP: F9_to_Date_TAP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F9_TO_DATE_TAP";
+            #binding-cells = <0>;
+            bindings = <&kp F9>, <&kp F10>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -175,10 +186,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB  &kp N1            &kp N2      &kp N3          &kp N4         &kp N5    &kp N6     &kp N7          &kp N8          &kp N9        &kp N0           &kp MINUS
-&trans   &trans            &trans      &kp LA(F9)      &trans         &trans    &kp LC(C)  &trans          &trans          &trans        &kp LC(P)        &kp KP_DIVIDE
-&trans   &Not_Significant  &kp LC(F5)  &SeeAssessment  &MDO_FollowUP  &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
-                                       &trans          &trans         &trans    &trans     &trans          &kp PERIOD
+&kp TAB  &kp N1            &kp N2      &kp N3          &kp N4         &kp N5        &kp N6     &kp N7          &kp N8           &kp N9        &kp N0           &kp MINUS
+&trans   &trans            &trans      &kp LA(F9)      &kp I          &kp F6        &kp LC(C)  &trans          &F9_to_Date_TAP  &kp ESC       &kp LC(P)        &kp KP_DIVIDE
+&trans   &Not_Significant  &kp LC(F5)  &SeeAssessment  &MDO_FollowUP  &AddingMed    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
+                                       &trans          &trans         &trans        &trans     &trans          &kp PERIOD
             >;
         };
 
