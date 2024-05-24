@@ -21,6 +21,11 @@
             bindings = <&Spoke_w_Patient>;
             key-positions = <2 38>;
         };
+
+        Self_Admin_COMBO {
+            bindings = <&Self_Admin>;
+            key-positions = <13 38>;
+        };
     };
 
     macros {
@@ -85,6 +90,13 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(A) &kp D &kp V &kp I &kp S &kp E &kp D &kp SPACE &kp T &kp O &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp T &kp H &kp E &kp SPACE &kp LS(M) &kp LS(D) &kp LS(O) &kp SPACE &kp A &kp F &kp T &kp E &kp R &kp SPACE &kp R &kp E &kp C &kp E &kp I &kp V &kp I &kp N &kp G &kp SPACE &kp T &kp H &kp E &kp SPACE &kp M &kp E &kp D &kp I &kp C &kp A &kp T &kp I &kp O &kp N &kp SPACE &kp F &kp O &kp R &kp SPACE &kp F &kp U &kp R &kp T &kp H &kp E &kp R &kp SPACE &kp I &kp N &kp S &kp T &kp R &kp U &kp C &kp T &kp I &kp O &kp N &kp S &kp DOT &kp SPACE>;
             label = "MDO_FOLLOWUP";
+        };
+
+        Not_Significant: Not_Significant {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N &kp O &kp N &kp E &kp SPACE &kp T &kp H &kp A &kp T &kp SPACE &kp I &kp S &kp SPACE &kp C &kp L &kp I &kp N &kp I &kp C &kp A &kp L &kp L &kp Y &kp SPACE &kp S &kp I &kp G &kp N &kp I &kp F &kp I &kp C &kp A &kp N &kp T>;
+            label = "NOT_SIGNIFICANT";
         };
     };
 
@@ -163,10 +175,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3          &kp N4         &kp N5    &kp N6     &kp N7          &kp N8          &kp N9        &kp N0           &kp MINUS
-&trans   &trans  &trans  &kp LA(F9)      &trans         &trans    &kp LC(C)  &trans          &trans          &trans        &kp LC(P)        &kp KP_DIVIDE
-&trans   &trans  &trans  &SeeAssessment  &MDO_FollowUP  &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
-                         &trans          &trans         &trans    &trans     &trans          &kp PERIOD
+&kp TAB  &kp N1            &kp N2      &kp N3          &kp N4         &kp N5    &kp N6     &kp N7          &kp N8          &kp N9        &kp N0           &kp MINUS
+&trans   &trans            &trans      &kp LA(F9)      &trans         &trans    &kp LC(C)  &trans          &trans          &trans        &kp LC(P)        &kp KP_DIVIDE
+&trans   &Not_Significant  &kp LC(F5)  &SeeAssessment  &MDO_FollowUP  &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp EQUAL
+                                       &trans          &trans         &trans    &trans     &trans          &kp PERIOD
             >;
         };
 
