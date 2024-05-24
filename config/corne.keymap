@@ -156,6 +156,15 @@
 
             tapping-term-ms = <150>;
         };
+
+        Screen_Shot_TAP: Screen_Shot_TAP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SCREEN_SHOT_TAP";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&kp LG(LS(S))>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
