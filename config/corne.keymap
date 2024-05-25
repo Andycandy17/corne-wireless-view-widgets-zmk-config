@@ -20,6 +20,8 @@
         Spoke_w_Pt_COMBO {
             bindings = <&Spoke_w_Patient>;
             key-positions = <2 38>;
+            slow-release;
+            timeout-ms = <10>;
         };
     };
 
