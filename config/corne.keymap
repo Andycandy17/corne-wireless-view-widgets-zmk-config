@@ -45,8 +45,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(R) &kp E &kp V &kp I &kp E &kp W &kp E &kp D &kp SPACE &kp D &kp O &kp S &kp E &kp COMMA &kp SPACE &kp S &kp T &kp O &kp R &kp A &kp G &kp E &kp FSLH &kp H &kp A &kp N &kp D &kp L &kp I &kp N &kp G &kp COMMA &kp SPACE &kp C &kp O &kp M &kp M &kp O &kp N &kp SPACE &kp W &kp A &kp R &kp N &kp I &kp N &kp G &kp S &kp SPACE &kp AMPS &kp SPACE &kp S &kp I &kp D &kp E &kp SPACE &kp E &kp F &kp F &kp E &kp C &kp T &kp S &kp SPACE &kp D &kp U &kp R &kp I &kp N &kp G &kp SPACE &kp T &kp H &kp E &kp SPACE &kp C &kp A &kp L &kp L &kp DOT &kp LS(A) &kp D &kp V &kp I &kp S &kp E &kp D &kp SPACE &kp T &kp O &kp SPACE &kp F &kp O &kp L &kp L &kp O &kp W &kp SPACE &kp U &kp P &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp LS(M) &kp LS(D) &kp LS(O) &kp SPACE &kp O &kp N &kp C &kp E &kp SPACE &kp P &kp A &kp C &kp K &kp A &kp G &kp E &kp SPACE &kp A &kp R &kp R &kp I &kp V &kp E &kp S &kp DOT &kp SPACE>;
             label = "NEW_PATIENT_DEL";
-            wait-ms = <50>;
-            tap-ms = <50>;
+            wait-ms = <45>;
+            tap-ms = <30>;
         };
 
         SeeAssessment: SeeAssessment {
@@ -103,11 +103,20 @@
             tap-ms = <15>;
         };
 
-        QOL_Declined: QOL_Declined {
+        QOL_opt_out: QOL_Declined {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp TAB &kp TAB &kp SPACE &kp TAB &kp SPACE &kp TAB &kp TAB &kp SPACE>;
             label = "QOL_DECLINED";
+        };
+
+        Sleep: Sleep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X) &kp U &kp S>;
+            label = "SLEEP";
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
     };
 
@@ -217,7 +226,7 @@
             label = "Raise";
             bindings = <
 &kp F12  &kp F1  &kp F2  &kp F3     &kp F4  &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans   &trans  &trans  &trans     &trans  &trans          &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans  &trans     &trans  &trans          &trans  &trans  &trans  &trans  &trans   &Sleep
 &trans   &trans  &trans  &Docusign  &trans  &QOLdeclined    &trans  &trans  &trans  &trans  &trans   &kp LG(L)
                          &trans     &trans  &trans          &trans  &trans  &trans
             >;
