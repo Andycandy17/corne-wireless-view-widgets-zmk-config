@@ -36,8 +36,8 @@
             #binding-cells = <0>;
             bindings = <&kp LS(L) &kp E &kp F &kp T &kp SPACE &kp M &kp E &kp S &kp S &kp A &kp G &kp E &kp SPACE &kp F &kp O &kp R &kp SPACE &kp A &kp SPACE &kp C &kp A &kp L &kp L &kp SPACE &kp B &kp A &kp C &kp K &kp DOT &kp SPACE &kp LS(P) &kp R &kp O &kp V &kp I &kp D &kp E &kp D &kp SPACE &kp N8 &kp N0 &kp N0 &kp SPACE &kp C &kp A &kp L &kp L &kp SPACE &kp B &kp A &kp C &kp K &kp SPACE &kp N &kp U &kp M &kp B &kp E &kp R>;
             label = "LEFT_MESSAGE";
-            wait-ms = <10>;
-            tap-ms = <15>;
+            wait-ms = <40>;
+            tap-ms = <25>;
         };
 
         New_Patient_Del: New_Patient_Del {
